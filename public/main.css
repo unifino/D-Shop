@@ -1,0 +1,51 @@
+@font-face {
+    font-family         : 'far';
+    src                 : url('../src/assets/fonts/fa-regular-400.ttf');
+    font-weight         : normal;
+    font-style          : normal;
+}
+@font-face {
+    font-family         : 'fas';
+    src                 : url('../src/assets/fonts/fa-solid-900.ttf');
+    font-weight         : normal;
+    font-style          : normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
+
+/* ------------------------------------------------------------------------------------- */
+
+* {
+    font-family         : 'Noto Sans Arabic', sans-serif;
+}
+
+.fx {
+    padding             : 0;
+    margin              : 0;
+    height              : 100%;
+    width               : 100%;
+}
+
+.no_select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+body {
+    background-color    : #032029;
+    position            : fixed;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------------------------- */
