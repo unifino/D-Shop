@@ -3,12 +3,15 @@
 
     <div id="wrapper">
 
-        <div id="loginPanel">
+        <div id="loginPanel" ref="LoginPanel">
 
             <input type="text" placeholder="نام کاربری">
             <input type="text" placeholder="کلمه عبور">
-            <div>ورود</div>
-            <i class="awesome"></i>
+            <div class="button" v-on:click="submit()">
+                <i class="icon"></i>
+                <div class="label">ورود</div>
+            </div>
+
         </div>
 
     </div>
@@ -20,7 +23,7 @@
 
 <script lang="ts">
 
-import { defineComponent }                  from "vue";
+import { defineComponent, ref }         from "vue";
 
 // -- =====================================================================================
 
@@ -28,7 +31,31 @@ export default defineComponent ( {
 
     name: "Login",
 
+    setup () {
+
+        // eslint-disable-next-line
+        const LoginPanel = ref<HTMLElement>( null as any );
+
+// -- =====================================================================================
+
+        const submit = function () {
+
+            // .. check credentials
+
+            // .. log in succeed
+            alert( LoginPanel.value.className )
+            
+            // .. log in failed
+
+        }
+
+// -- =====================================================================================
+
+        return { LoginPanel, submit }
+    }
+
 } );
+
 
 // -- =====================================================================================
 
@@ -63,11 +90,37 @@ export default defineComponent ( {
     text-align: center;
 }
 
-.awesome {
-    color               : #be8a1a;
-    font-family         : "far";
+input {
+    width: 90%;
+    direction: rtl;
+    padding: .2em .9em .2em 0;
+    margin: .17em 0;
+    border-radius: 1em;
+    border: none;
+}
+
+.button {
+    width: 5em;
+    background-color: rgb(3, 88, 114);
+    margin: auto;
+    padding-top: .4em;
+    margin-top: 1.7em;
+    border-radius: .3em;
+}
+
+.icon {
+    color               : #b4b4b4;
+    font-family         : "fas";
     font-style          : normal;
-    text-align          : center;
+    text-align          : right;
+    font-size           : 1.6em;
+}
+
+.label {
+    color: black;
+    font-size: .8em;
+    background-color: #b4b4b4;
+    border-radius: 0 0 .3em .3em;
 }
 
 </style>
